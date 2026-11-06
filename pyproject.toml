@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "social-auto-poster"
+version = "0.1.0"
+description = "A small CLI that validates and publishes a queue of scheduled social-media posts through pluggable publishers."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Shoaib Ahmed" }]
+dependencies = []
+
+[project.scripts]
+social-auto-poster = "social_auto_poster.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
